@@ -284,7 +284,7 @@ build_results <- function(skimmed, data, data_cols, groups, new_names, delim) {
   } else {
     tibble::tibble(
       skim_variable = data_cols,
-      names(skimmed) <- new_names
+      setNames(skimmed, new_names)
     )
   }
 }
